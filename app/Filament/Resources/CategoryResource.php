@@ -12,6 +12,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Toggle;
+use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -36,12 +37,13 @@ class CategoryResource extends Resource
                                 ->label('Nama')
                                 ->required()
                                 ->maxLength(255)
-                                ->reactive()
-                                ->afterStateUpdated(function ($state, $set, $context) {
-                                    if ($context === 'create') {
-                                        $set('slug', Str::slug($state));
-                                    }
-                                }),
+                                ->live(onBlur: true)
+                                ->afterStateUpdated(function (string $operation, $state, Set $set){
+                                if ($operation !== 'create'){
+                                    return;
+                                }
+                                $set('slug', Str::slug($state));
+                            }),
 
                             TextInput::make('slug')
                                 ->label('Slug')
@@ -70,6 +72,7 @@ class CategoryResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('image'),
+
                 Tables\Columns\TextColumn::make('slug')
                     ->searchable(),
                 Tables\Columns\IconColumn::make('is_active')

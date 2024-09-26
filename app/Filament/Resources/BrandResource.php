@@ -20,6 +20,7 @@ use App\Models\Category;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Toggle;
+use Filament\Forms\Set;
 use Illuminate\Support\Str;
 
 class BrandResource extends Resource
@@ -39,12 +40,13 @@ class BrandResource extends Resource
                                 ->label('Nama')
                                 ->required()
                                 ->maxLength(255)
-                                ->reactive()
-                                ->afterStateUpdated(function ($state, $set, $context) {
-                                    if ($context === 'create') {
-                                        $set('slug', Str::slug($state));
+                                ->live(onBlur: true)
+                                ->afterStateUpdated(function (string $operation, $state, Set $set){
+                                    if ($operation !== 'create'){
+                                        return;
                                     }
-                                }),
+                                    $set('slug', Str::slug($state));
+                            }),
 
                             TextInput::make('slug')
                                 ->label('Brand')
