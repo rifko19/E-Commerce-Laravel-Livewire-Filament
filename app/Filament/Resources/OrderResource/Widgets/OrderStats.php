@@ -9,6 +9,7 @@ use Illuminate\Support\Number;
 
 class OrderStats extends BaseWidget
 {
+
     protected function getStats(): array
     {
         return [
