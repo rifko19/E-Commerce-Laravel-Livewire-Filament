@@ -69,7 +69,7 @@
             <!-- Social Brands -->
             <div>
                 <a class="w-10 h-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600"
-                    href="#">
+                    href="https://www.linkedin.com/in/rifko-akbar-592915249/">
                     <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                         fill="currentColor" viewBox="0 0 448 512">
                         <path
@@ -77,7 +77,7 @@
                     </svg>
                 </a>
                 <a class="w-10 h-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 disabled:opacity-50 disabled:pointer-events-none focus:outline-none focus:ring-1 focus:ring-gray-600"
-                    href="#">
+                    href="https://www.instagram.com/rifko_akbar2">
                     <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
                         fill="currentColor" viewBox="0 0 448 512">
                         <path
