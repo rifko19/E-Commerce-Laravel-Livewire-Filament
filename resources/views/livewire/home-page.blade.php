@@ -1,6 +1,6 @@
 <div>
     {{-- Hero Section Start --}}
-    <div class="w-full h-screen bg-gradient-to-r from-blue-200 to-cyan-200 py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+    <div class="w-full h-screen  bg-gradient-to-r from-slate-700 to-cyan-500 py-10 px-4 sm:px-6 lg:px-8 mx-auto">
         <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Grid -->
             <div class="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
@@ -159,9 +159,9 @@
                 <!-- End Col -->
 
                 <div class="relative ms-4">
-                    <img class="w-full rounded-md"
-                        src="https://static.vecteezy.com/system/resources/previews/011/993/278/non_2x/3d-render-online-shopping-bag-using-credit-card-or-cash-for-future-use-credit-card-money-financial-security-on-mobile-3d-application-3d-shop-purchase-basket-retail-store-on-e-commerce-free-png.png"
-                        alt="Image Description">
+                    <video class="w-full rounded-md" autoplay loop muted playsinline>
+                        <source src="/Images/model.webm" type="video/webm">
+                    </video>
                     <div
                         class="absolute inset-0 -z-[1] bg-gradient-to-tr from-gray-200 via-white/0 to-white/0 w-full h-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6 dark:from-slate-800 dark:via-slate-900/0 dark:to-slate-900/0">
                     </div>
